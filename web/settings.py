@@ -15,7 +15,10 @@ import firebase_admin
 import os
 import json
 from firebase_admin import credentials, initialize_app
+from dotenv import load_dotenv
+load_dotenv()
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 firebase_creds = os.getenv("FIREBASE_CREDENTIALS")  # variable de entorno
 
 if firebase_creds:
